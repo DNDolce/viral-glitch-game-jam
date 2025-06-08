@@ -1,0 +1,9 @@
+piece = "rook";
+team = 1;
+image_index = 2;
+move_up			= [20, 20];
+move_down		= [20, 20];
+move_left		= [20, 20];
+move_right		= [20, 20];
+move_up_diag	= [0, 0];
+move_down_diag	= [0, 0];

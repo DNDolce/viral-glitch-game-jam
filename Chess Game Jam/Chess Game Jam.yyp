@@ -1,0 +1,44 @@
+{
+  "$GMProject":"",
+  "%Name":"Chess Game Jam",
+  "AudioGroups":[
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+  "configs":{
+    "children":[],
+    "name":"Default",
+  },
+  "defaultScriptType":1,
+  "Folders":[
+    {"$GMFolder":"","%Name":"Large Use Objects","folderPath":"folders/Large Use Objects.yy","name":"Large Use Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
+  "IncludedFiles":[],
+  "isEcma":false,
+  "LibraryEmitters":[],
+  "MetaData":{
+    "IDEVersion":"2024.8.1.171",
+  },
+  "name":"Chess Game Jam",
+  "resources":[
+    {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
+    {"id":{"name":"oIndicator","path":"objects/oIndicator/oIndicator.yy",},},
+    {"id":{"name":"oPiece","path":"objects/oPiece/oPiece.yy",},},
+    {"id":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
+    {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},},
+    {"id":{"name":"sBoard","path":"sprites/sBoard/sBoard.yy",},},
+    {"id":{"name":"sIndicator","path":"sprites/sIndicator/sIndicator.yy",},},
+    {"id":{"name":"sPieces","path":"sprites/sPieces/sPieces.yy",},},
+    {"id":{"name":"sTurn","path":"sprites/sTurn/sTurn.yy",},},
+    {"id":{"name":"tBoard","path":"tilesets/tBoard/tBoard.yy",},},
+  ],
+  "resourceType":"GMProject",
+  "resourceVersion":"2.0",
+  "RoomOrderNodes":[
+    {"roomId":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
+  ],
+  "templateType":"game",
+  "TextureGroups":[
+    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+}

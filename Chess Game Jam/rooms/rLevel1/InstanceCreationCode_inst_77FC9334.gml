@@ -1,0 +1,9 @@
+piece = "knight";
+team = 1;
+image_index = 5;
+move_up			= [0, 0];
+move_down		= [0, 0];
+move_left		= [0, 0];
+move_right		= [0, 0];
+move_up_diag	= [0, 0];
+move_down_diag	= [0, 0];
