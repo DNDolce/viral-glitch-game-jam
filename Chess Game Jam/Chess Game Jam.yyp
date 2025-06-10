@@ -21,6 +21,7 @@
   },
   "name":"Chess Game Jam",
   "resources":[
+    {"id":{"name":"oAttack","path":"objects/oAttack/oAttack.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oIndicator","path":"objects/oIndicator/oIndicator.yy",},},
     {"id":{"name":"oPiece","path":"objects/oPiece/oPiece.yy",},},

@@ -23,5 +23,21 @@ for (var d = 0; d < max(sign(_deltaX) * _deltaX / tile_w, sign(_deltaY) * _delta
 //occupied spaces are not valid move locations
 //(will need to be updated to account for taking pieces)
 if place_meeting(x, y, oPiece)
-{	instance_destroy(self);
+{	var _target = instance_nearest(x, y, oPiece);
+	if _target.team != oControl.turn
+	and global.held_piece.piece != "pawn"
+		instance_create_layer(x, y, "Instances", oAttack, {image_index : 1, depth : -1});
+	instance_destroy(self);
+};
+
+if  mouse_check_button_pressed(mb_left)
+and position_meeting(mouse_x, mouse_y, id)
+and global.held_piece != noone
+{	global.held_piece.x = x;
+	global.held_piece.y = y;
+	global.held_piece.moved = true;
+	oControl.turn = 1 - global.held_piece.team;
+	global.held_piece = noone;
+	instance_destroy(oIndicator);
+	instance_destroy(oAttack);
 };

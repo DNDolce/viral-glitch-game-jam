@@ -9,7 +9,8 @@ if global.held_piece == id
 //highlight valid moves
 //(does not account for knights)
 if	global.held_piece == id
-and !instance_exists(oIndicator)
+and instance_number(oIndicator) == 0
+and instance_number(oAttack) == 0
 {	var _column = (prev_x - 32) / 16;
 	var _row	= (prev_y - 32) / 16;
 	
@@ -56,4 +57,40 @@ and !instance_exists(oIndicator)
 			instance_create_layer(prev_x + tile_w * (n + 1), prev_y + tile_h * (n + 1), 
 			"Instances", oIndicator, {image_index : 0})
 	}; 
+	
+	//pawn attacks
+	if piece == "pawn"
+	{	if move_up_diag[1] != 0
+		{	//take the nearest piece to the viable attack squares
+			var _target_left = instance_nearest(prev_x - tile_w, prev_y - tile_h, oPiece);
+			//nearest =/= in that spot, make sure it's in THAT spot
+			//and the piece is an opponent's
+			if  _target_left.x == prev_x - tile_w 
+			and _target_left.y == prev_y - tile_h
+			and _target_left.team != oControl.turn
+				instance_create_layer(prev_x - tile_w, prev_y - tile_h, 
+					"Instances", oAttack, {image_index : 1, depth : -1});
+			var _target_right = instance_nearest(prev_x + tile_w, prev_y - tile_h, oPiece);
+			if  _target_right.x == prev_x + tile_w 
+			and _target_right.y == prev_y - tile_h
+			and _target_right.team != oControl.turn
+				instance_create_layer(prev_x + tile_w, prev_y - tile_h, 
+					"Instances", oAttack, {image_index : 1, depth : -1});
+		};
+		
+		if move_down_diag[1] != 0
+		{	var _target_left = instance_nearest(prev_x - tile_w, prev_y + tile_h, oPiece);
+			if  _target_left.x == prev_x - tile_w 
+			and _target_left.y == prev_y + tile_h
+			and _target_left.team != oControl.turn
+				instance_create_layer(prev_x - tile_w, prev_y + tile_h, 
+					"Instances", oAttack, {image_index : 1, depth : -1});
+			var _target_right = instance_nearest(prev_x + tile_w, prev_y + tile_h, oPiece);
+			if  _target_right.x == prev_x + tile_w 
+			and _target_right.y == prev_y + tile_h
+			and _target_right.team != oControl.turn
+				instance_create_layer(prev_x + tile_w, prev_y + tile_h, 
+					"Instances", oAttack, {image_index : 1, depth : -1});
+		};
+	};
 };
