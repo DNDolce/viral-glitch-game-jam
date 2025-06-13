@@ -22,7 +22,10 @@ and moved
 };
 
 if mouse_check_button_pressed(mb_right)
-	global.held_piece = noone;
+{	global.held_piece = noone;
+	instance_destroy(oAttack);
+	instance_destroy(oIndicator);
+};
 	
 //if	global.held_piece == id
 //{

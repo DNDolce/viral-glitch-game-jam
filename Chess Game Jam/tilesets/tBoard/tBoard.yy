@@ -13,8 +13,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Chess Game Jam",
-    "path":"Chess Game Jam.yyp",
+    "name":"Tilesets",
+    "path":"folders/Tilesets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

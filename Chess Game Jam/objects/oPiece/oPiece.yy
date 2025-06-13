@@ -10,8 +10,8 @@
   "name":"oPiece",
   "overriddenProperties":[],
   "parent":{
-    "name":"Large Use Objects",
-    "path":"folders/Large Use Objects.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

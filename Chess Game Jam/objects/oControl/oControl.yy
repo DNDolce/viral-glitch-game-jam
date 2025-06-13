@@ -9,8 +9,8 @@
   "name":"oControl",
   "overriddenProperties":[],
   "parent":{
-    "name":"Chess Game Jam",
-    "path":"Chess Game Jam.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

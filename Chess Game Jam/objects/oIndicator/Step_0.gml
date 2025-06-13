@@ -21,7 +21,6 @@ for (var d = 0; d < max(sign(_deltaX) * _deltaX / tile_w, sign(_deltaY) * _delta
 };
 
 //occupied spaces are not valid move locations
-//(will need to be updated to account for taking pieces)
 if place_meeting(x, y, oPiece)
 {	var _target = instance_nearest(x, y, oPiece);
 	if _target.team != oControl.turn
