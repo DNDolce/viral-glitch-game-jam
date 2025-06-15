@@ -4,6 +4,12 @@ if global.held_piece == noone
 	exit; //prevents crash on final frame before destroyed at line 8
 };
 
+if global.stop_all
+or instance_exists(oExpBar)
+{	visible = false;
+	exit;
+};
+
 //check how many squares away we are from held piece
 var _deltaX = x - global.held_piece.x;
 var _deltaY = y - global.held_piece.y;
@@ -25,9 +31,14 @@ if place_meeting(x, y, oPiece)
 {	var _target = instance_nearest(x, y, oPiece);
 	if _target.team != oControl.turn
 	and global.held_piece.piece != "pawn"
+	and global.held_piece.piece != "pawn inverse"
 		instance_create_layer(x, y, "Instances", oAttack, {image_index : 1, depth : -1});
 	instance_destroy(self);
 };
+
+if  instance_exists(oExpBar)
+{	visible = false;
+}
 
 if  mouse_check_button_pressed(mb_left)
 and position_meeting(mouse_x, mouse_y, id)

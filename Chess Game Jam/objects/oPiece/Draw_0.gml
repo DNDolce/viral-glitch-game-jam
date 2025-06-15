@@ -1,7 +1,9 @@
 draw_self();
+
+
 //highlight selected piece
 if global.held_piece == id
-	draw_sprite(sIndicator, 2, x, y);
+	draw_sprite(sIndicator, 2, prev_x, prev_y);
 
 //NOTE: this section has the most potential to be simplified
 //		but it works pretty well so not a priority
@@ -90,6 +92,27 @@ and instance_number(oAttack) == 0
 			and _target_right.y == prev_y + tile_h
 			and _target_right.team != oControl.turn
 				instance_create_layer(prev_x + tile_w, prev_y + tile_h, 
+					"Instances", oAttack, {image_index : 1, depth : -1});
+		};
+	};
+	
+	//inverted pawn attack
+	if piece == "pawn inverse"
+	{	if move_down[1] != 0
+		{	var _target = instance_nearest(prev_x, prev_y + tile_h, oPiece);
+			if  _target.x == prev_x
+			and _target.y == prev_y + tile_h
+			and _target.team != oControl.turn
+				instance_create_layer(prev_x, prev_y + tile_h,
+					"Instances", oAttack, {image_index : 1, depth : -1});
+		};
+		
+		if move_up[1] != 0
+		{	var _target = instance_nearest(prev_x, prev_y - tile_h, oPiece);
+			if  _target.x == prev_x
+			and _target.y == prev_y - tile_h
+			and _target.team != oControl.turn
+				instance_create_layer(prev_x, prev_y - tile_h,
 					"Instances", oAttack, {image_index : 1, depth : -1});
 		};
 	};

@@ -1,0 +1,9 @@
+piece = "king";
+team = 1;
+image_index = 3;
+move_up			= [1, 1];
+move_down		= [1, 1];
+move_left		= [1, 1];
+move_right		= [1, 1];
+move_up_diag	= [1, 1];
+move_down_diag	= [1, 1];

@@ -1,0 +1,9 @@
+piece = "bishop";
+team = 1;
+image_index = 1;
+move_up			= [0, 0];
+move_down		= [0, 0];
+move_left		= [0, 0];
+move_right		= [0, 0];
+move_up_diag	= [20, 20];
+move_down_diag	= [20, 20];

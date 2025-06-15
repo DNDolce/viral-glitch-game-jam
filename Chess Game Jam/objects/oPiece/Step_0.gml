@@ -2,6 +2,9 @@
 if	global.held_piece != id
 and global.held_piece != noone
 	exit;
+
+if global.stop_all
+	exit;
 	
 //select piece
 if	position_meeting(mouse_x, mouse_y, id)
@@ -12,6 +15,11 @@ and oControl.turn == team
 	prev_y = y;
 };
 
+//restart game if king dies
+if  piece == "king"
+and hp <= 0
+	game_restart();
+	
 //remove first move bonus for pawns
 if  piece == "pawn"
 and moved
@@ -19,6 +27,14 @@ and moved
 		move_up[0] = 1;
 	if move_down[0] == 2
 		move_down[0] = 1;
+};
+//and inverted pawns
+if  piece == "pawn inverse"
+and moved
+{	if move_up_diag[0] == 2
+		move_up_diag[0] = 1;
+	if move_down_diag[0] == 2
+		move_down_diag[0] = 1;
 };
 
 if mouse_check_button_pressed(mb_right)

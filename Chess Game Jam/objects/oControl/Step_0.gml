@@ -1,6 +1,7 @@
 image_index = turn;
 
 if  turns_passed == 0
+and room == rLevel1
 and !stop
 {	var _scene_text = instance_create_depth(1000, 1000, 0, speak_block);
 	with _scene_text

@@ -1,3 +1,9 @@
 prev_x = x;
 prev_y = y;
 moved = false;
+experience = 0;
+level = 0;
+hp = 100;
+max_hp = 100;
+dmg = 100;
+def = 0;

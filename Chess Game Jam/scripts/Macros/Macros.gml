@@ -1,6 +1,9 @@
 #macro tile_w		16
 #macro tile_h		16
 #macro WIN_SIZE		1
+#macro center_pos	96
 global.held_piece	= noone;
+global.attack_spot	= noone;
 global.talker		= noone;
 global.highlighted	= noone;
+global.stop_all		= false;

@@ -9,8 +9,8 @@
   "name":"speak_block",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"D.Objects",
+    "path":"folders/Dialogue/D.Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

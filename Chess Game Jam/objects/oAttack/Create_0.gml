@@ -1,0 +1,15 @@
+battle_done = false;
+battle_move = false;
+battle_start = false;
+anim_start = false;
+anim_frame = 0;
+attack_num = 0;
+show_exp = false;
+prev_exp = 0;
+exp_inc = 0;
+attacker = noone;
+defender = noone;
+move_xa = 0;
+move_ya = 0;
+move_xd = 0;
+move_yd = 0;
