@@ -36,7 +36,7 @@ if anim_start
 };
 
 if alarm[2]
-{	draw_set_font(fn_start_menu);
+{	draw_set_font(fn_start_menu_1);
 	if attack_num == 0
 	{	draw_set_halign(fa_left);
 		draw_text_color(defender.x, defender.y, string(attacker.dmg - defender.def), c_red, c_red, c_red, c_red, 1);

@@ -4,6 +4,7 @@ and global.held_piece != noone
 	exit;
 
 if global.stop_all
+or instance_exists(oExpBar)
 	exit;
 	
 //select piece
@@ -14,11 +15,6 @@ and oControl.turn == team
 	prev_x = x;
 	prev_y = y;
 };
-
-//restart game if king dies
-if  piece == "king"
-and hp <= 0
-	game_restart();
 	
 //remove first move bonus for pawns
 if  piece == "pawn"

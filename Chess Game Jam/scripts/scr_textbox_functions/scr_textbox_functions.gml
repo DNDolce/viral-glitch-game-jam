@@ -100,12 +100,14 @@ function scr_text(_text){
 				speaker_side[page_number] = 1;
 				break;
 				
-			case "blue npc happy":
-				speaker_sprite[page_number] = spr_npc_blue_happy;
-				speaker_sprite_neutral[page_number] = spr_npc_blue_happy_neutral;
+			case "piece":
 				textbox_sprite[page_number] = spr_npc_blue_textbox;
-				speaker_side[page_number] = 1;
 				break;
+			case "horse":
+				speaker_sprite[page_number] = spr_horse;
+				speaker_sprite_neutral[page_number] = spr_horse;
+				textbox_sprite[page_number] = spr_horse_textbox;
+				speaker_side[page_number] = -1;
 		}
 	}
 	

@@ -86,8 +86,8 @@
   ],
   "name":"rLevel1",
   "parent":{
-    "name":"Chess Game Jam",
-    "path":"Chess Game Jam.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

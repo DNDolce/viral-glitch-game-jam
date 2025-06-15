@@ -22,6 +22,8 @@ if exp_shown < exp_gain
   and !alarm[0]
 {	oControl.turn = 1 - global.held_piece.team;
 	global.held_piece.moved = true;	
+	if destroy.piece == "king"
+		room_goto_next();
 	instance_destroy(destroy);
 	global.held_piece = noone;
 	mouse_clear(mb_left);
@@ -34,7 +36,7 @@ if exp_shown < exp_gain
 	draw_set_color(c_ltgray);
 	draw_rectangle(center_pos - 45, center_pos - 27, center_pos + 45, center_pos + 9, false);
 	draw_set_color(c_black);
-	draw_set_font(fn_start_menu);
+	draw_set_font(fn_start_menu_1);
 	draw_set_halign(fa_left);
 	draw_text(center_pos - 42, center_pos - 25, "LEVEL : " + string(prev_level) + " + [" + string(level_gain) + "]");
 	draw_text(center_pos - 42, center_pos - 15, "DMG   : " + string(prev_dmg)   + " + [" + string(dmg_gain)   + "]");

@@ -141,6 +141,8 @@ if key_accept{
 				
 				global.talker.text_chapter += 1;
 			}
+			
+			global.highlighted = noone;
 			instance_destroy();
 		}
 	}
