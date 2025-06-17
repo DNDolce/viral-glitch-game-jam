@@ -6,8 +6,9 @@ draw_rectangle(center_pos - 25, 192 - 7, center_pos - 25 + prev_exp / 2 + exp_sh
 if exp_shown < exp_gain
 {	exp_shown += 1;
 	caller.experience += 1;
-	if caller.experience >= 100
-	{	caller.experience -= 100;
+	if caller.experience >= caller.max_exp
+	{	caller.experience -= caller.max_exp;
+		caller.max_exp += 50;
 		caller.level += 1;
 		level_gain = 1;
 		var _dmg_gain = irandom_range(0, 10);
@@ -20,14 +21,7 @@ if exp_shown < exp_gain
 	};
 } else if level_up == false
   and !alarm[0]
-{	oControl.turn = 1 - global.held_piece.team;
-	global.held_piece.moved = true;	
-	if destroy.piece == "king"
-		room_goto_next();
-	instance_destroy(destroy);
-	global.held_piece = noone;
-	mouse_clear(mb_left);
-	instance_destroy(self);
+{	instance_destroy(self);
 } else if level_up == true
 {	if !alarm[0]
 		alarm[0] = 180;

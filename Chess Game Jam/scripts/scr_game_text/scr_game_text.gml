@@ -67,7 +67,30 @@ function scr_game_text(_text_id){
 			scr_text("cool beans");
 			scr_text("What.", "piece");
 			break;
-		
+		//------------------------ LEVEL 2-------------------------------//
+		case "pawn trade":
+			scr_text("What? You look surprised.");
+			scr_text("Did you think because your pawns could only move forward that was the case for all pawns?");
+			scr_text("Tsk tsk, you poor naive creature. I pity you.");
+			scr_text("As a token of good will, let's trade a pawn each. That way you can have a piece of sophistication.");
+			break;
+			
+		case "pawn trap":
+			scr_text("HAHAHA YOU ABSOLUTE RUBE. YOU FOOL.");
+			scr_text("You think ownership means anything in war?");
+			scr_text("War is a battle of very strict, arbitrary laws of nature that cannot be opposed.");
+			scr_text("The turn is mine, the pawn moves on my turn. Therefore it is I who moves the pawn, and now your queen is mine.");
+			scr_text("Oh well, nothing one such as yourself could have done.");
+			scr_text("Let this be a lesson to your future self to consider the consequences of your actions.");
+			break;
+			
+		case "pawn wait":
+			scr_text("...");
+			scr_text("It appears I did not consider the consequences of my actions.");
+			scr_text("Alright let's trade for realsies.");
+			oControl.alarm[1] = 5;
+			break;
+			
 		//--------------------POST LEVEL 2-------------------------------//
 		case "queen rPostLevel2 0":
 			scr_text("Yeah that's all we have so far.", "piece");

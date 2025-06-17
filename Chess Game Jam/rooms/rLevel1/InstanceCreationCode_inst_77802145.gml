@@ -1,9 +1,3 @@
 piece = "queen";
 team = 1;
 image_index = 4;
-move_up			= [20, 20];
-move_down		= [20, 20];
-move_left		= [20, 20];
-move_right		= [20, 20];
-move_up_diag	= [20, 20];
-move_down_diag	= [20, 20];
