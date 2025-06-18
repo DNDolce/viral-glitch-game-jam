@@ -15,6 +15,7 @@ and team == 0
 {	global.held_piece = id;
 	prev_x = x;
 	prev_y = y;
+	audio_play_sound(snGrabPiece, 0, false);
 };
 
 //cancel selection

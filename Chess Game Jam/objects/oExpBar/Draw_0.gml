@@ -24,7 +24,7 @@ if exp_shown < exp_gain
 {	instance_destroy(self);
 } else if level_up == true
 {	if !alarm[0]
-		alarm[0] = 180;
+		alarm[0] = 80;
 	draw_set_color(c_white);
 	draw_rectangle(center_pos - 46, center_pos - 28, center_pos + 46, center_pos + 10, false);
 	draw_set_color(c_ltgray);

@@ -101,7 +101,9 @@ if !setup{
 if text_pause_timer <= 0{
 	
 	if draw_character < text_length[page]{
-		audio_play_sound(text_sound_1, 10, false, 2, 0, 1.5);
+		if !audio_is_playing(text_sound_1)
+		{	audio_play_sound(text_sound_1, 10, false, 1);
+		};
 		draw_character += text_speed;
 		draw_character = clamp(draw_character, 0, text_length[page])
 		var _check_char = string_char_at(text[page], draw_character);

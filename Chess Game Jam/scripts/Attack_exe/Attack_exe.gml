@@ -52,6 +52,7 @@ function Attack_exe(_attacker, _defender){
 		};
 		if battle_step == 3
 		{	battle_step++;
+			audio_play_sound(snAtkPiece, 0, false, 20);
 		};
 	};
 	//4. Loop micro-movements until battlers are in position
@@ -62,8 +63,8 @@ function Attack_exe(_attacker, _defender){
 		if _attacker.x != 36
 		or _attacker.y != 32
 		{	with _attacker
-			{	move_towards_point(36, _attacker.y, 1);
-				move_towards_point(_attacker.x, 32, 1);
+			{	move_towards_point(36, _attacker.y, 2);
+				move_towards_point(_attacker.x, 32, 2);
 				_attacker.x = round(_attacker.x);
 				_attacker.y = round(_attacker.y);
 			};
@@ -76,8 +77,8 @@ function Attack_exe(_attacker, _defender){
 		if _defender.x != 140
 		or _defender.y != 32
 		{	with _defender
-			{	move_towards_point(_defender.x, 32, 1);
-				move_towards_point(140, _defender.y, 1);
+			{	move_towards_point(_defender.x, 32, 2);
+				move_towards_point(140, _defender.y, 2);
 				_defender.x = round(_defender.x);
 				_defender.y = round(_defender.y);
 			};
@@ -97,6 +98,9 @@ function Attack_exe(_attacker, _defender){
 	//6. Draw first attack animation
 	if battle_step == 6
 	{	show_debug_message(battle_step);
+		if anim_frame == 0
+		{	audio_play_sound(snAttack, 0, false);
+		};
 		if anim_frame < 8
 		{	draw_sprite(sAttackAnim, clamp(round(anim_frame), 0, 7), _defender.x, _defender.y);
 			anim_frame += 0.25;
@@ -131,6 +135,9 @@ function Attack_exe(_attacker, _defender){
 	//6. Draw second attack animation
 	if battle_step == 9
 	{	show_debug_message(battle_step);
+		if anim_frame == 0
+		{	audio_play_sound(snAttack, 0, false);
+		};
 		if anim_frame < 8
 		{	draw_sprite_ext(sAttackAnim, clamp(round(anim_frame), 0, 7), 
 							_attacker.x + 16, _attacker.y,
@@ -166,8 +173,8 @@ function Attack_exe(_attacker, _defender){
 		if _attacker.x != _attacker.prev_x
 		or _attacker.y != _attacker.prev_y
 		{	with _attacker
-			{	move_towards_point(_attacker.prev_x, _attacker.y, 1);
-				move_towards_point(_attacker.x, _attacker.prev_y, 1);
+			{	move_towards_point(_attacker.prev_x, _attacker.y, 2);
+				move_towards_point(_attacker.x, _attacker.prev_y, 2);
 				_attacker.x = round(_attacker.x);
 				_attacker.y = round(_attacker.y);
 			};
@@ -178,8 +185,8 @@ function Attack_exe(_attacker, _defender){
 		if _defender.x != _defender.prev_x
 		or _defender.y != _defender.prev_y
 		{	with _defender
-			{	move_towards_point(_defender.prev_x, _defender.y, 1);
-				move_towards_point(_defender.x, _defender.prev_y, 1);
+			{	move_towards_point(_defender.prev_x, _defender.y, 2);
+				move_towards_point(_defender.x, _defender.prev_y, 2);
 				_defender.x = round(_defender.x);
 				_defender.y = round(_defender.y);
 			};
@@ -204,8 +211,8 @@ function Attack_exe(_attacker, _defender){
 		if _defender.x != _defender.prev_x
 		or _defender.y != _defender.prev_y
 		{	with _defender
-			{	move_towards_point(_defender.prev_x, _defender.y, 1);
-				move_towards_point(_defender.x, _defender.prev_y, 1);
+			{	move_towards_point(_defender.prev_x, _defender.y, 2);
+				move_towards_point(_defender.x, _defender.prev_y, 2);
 				_defender.x = round(_defender.x);
 				_defender.y = round(_defender.y);
 			};
@@ -220,8 +227,8 @@ function Attack_exe(_attacker, _defender){
 		if _attacker.x != _defender.prev_x
 		or _attacker.y != _defender.prev_y
 		{	with _attacker
-			{	move_towards_point(_defender.prev_x, _attacker.y, 1);
-				move_towards_point(_attacker.x, _defender.prev_y, 1);
+			{	move_towards_point(_defender.prev_x, _attacker.y, 2);
+				move_towards_point(_attacker.x, _defender.prev_y, 2);
 				_attacker.x = round(_attacker.x);
 				_attacker.y = round(_attacker.y);
 			};
@@ -276,6 +283,7 @@ function Attack_exe(_attacker, _defender){
 		} else
 		{	oControl.turn = 0;
 		};
+		oControl.first_attack = true;
 		oControl.turns_passed++;
 		instance_destroy(oAttack);
 		instance_destroy(oIndicator);

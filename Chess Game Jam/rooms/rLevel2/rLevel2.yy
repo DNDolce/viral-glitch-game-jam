@@ -39,6 +39,7 @@
     {"name":"inst_5963575","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_698AEBF7","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_47DE6FCF","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_15EDEA10","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -76,6 +77,7 @@
         {"$GMRInstance":"v1","%Name":"inst_1F880082_1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F880082_1","objectId":{"name":"oPiece","path":"objects/oPiece/oPiece.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":112.0,"y":128.0,},
         {"$GMRInstance":"v1","%Name":"inst_391244CB_1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_391244CB_1","objectId":{"name":"oPiece","path":"objects/oPiece/oPiece.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":128.0,},
         {"$GMRInstance":"v1","%Name":"inst_6792806F_1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6792806F_1","objectId":{"name":"oPiece","path":"objects/oPiece/oPiece.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":128.0,},
+        {"$GMRInstance":"v1","%Name":"inst_15EDEA10","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_15EDEA10","objectId":{"name":"oStatDisplay","path":"objects/oStatDisplay/oStatDisplay.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":192.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Board","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Board","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":12,"TileCompressedData":[
           -14,4,-8,2,-3,4,94,7,1,4,1,4,1,4,1,4,5,4,4,7,4,1,4,1,4,1,4,1,5,4,4,7,1,4,1,4,1,4,1,4,5,4,4,7,4,1,4,1,

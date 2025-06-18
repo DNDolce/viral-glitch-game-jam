@@ -5,6 +5,7 @@ function Move_exe(xx = x - 2, yy = y - 2){
 	global.held_piece.y = yy;
 	global.held_piece.moved = true;
 	global.held_piece = noone;
+	audio_play_sound(snMovePiece, 0, false, 20);
 	if oControl.turn == 0
 	{	oControl.turn = 1;
 	} else

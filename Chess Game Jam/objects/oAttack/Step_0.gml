@@ -20,3 +20,4 @@ and !global.stop_all
 	global.attack_spot = id;
 	global.stop_all = true;
 };
+
