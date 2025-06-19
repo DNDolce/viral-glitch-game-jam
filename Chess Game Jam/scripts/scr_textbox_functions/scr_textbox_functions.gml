@@ -95,11 +95,28 @@ function scr_text(_text){
 		
 			case "blue npc":
 				speaker_sprite[page_number] = spr_npc_blue_speak;
-				speaker_sprite_neutral[page_number] = spr_npc_blue_speak;
+				speaker_sprite_neutral[page_number] = spr_npc_blue_neutral;
 				textbox_sprite[page_number] = spr_npc_blue_textbox;
 				speaker_side[page_number] = 1;
 				break;
-				
+			case "blue npc happy":
+				speaker_sprite[page_number] = spr_npc_blue_happy;
+				speaker_sprite_neutral[page_number] = spr_npc_blue_happy_neutral;
+				textbox_sprite[page_number] = spr_npc_blue_textbox;
+				speaker_side[page_number] = 1;
+				break;
+			case "blue npc angry":
+				speaker_sprite[page_number] = spr_npc_blue_angry;
+				speaker_sprite_neutral[page_number] = spr_npc_blue_angry_neutral;
+				textbox_sprite[page_number] = spr_npc_blue_textbox;
+				speaker_side[page_number] = 1;
+				break;
+			case "death":
+				speaker_sprite[page_number] = sDeathSpeak;
+				speaker_sprite_neutral[page_number] = sDeathNeutral;
+				textbox_sprite[page_number] = spr_npc_blue_textbox;
+				speaker_side[page_number] = 1;
+				break;
 			case "piece":
 				textbox_sprite[page_number] = spr_npc_blue_textbox;
 				break;

@@ -7,3 +7,4 @@ global.attack_spot  = noone;
 global.talker		= noone;
 global.highlighted	= noone;
 global.stop_all		= false;
+global.betrayal		= false;

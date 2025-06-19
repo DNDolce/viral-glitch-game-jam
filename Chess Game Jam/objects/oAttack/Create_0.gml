@@ -1,6 +1,9 @@
 image_index = 1;
 depth = -1;
 anim_frame = 0;
+defeat_frame = 0;
+attacker_yscale = 1;
+defender_yscale = 1;
 attacker = noone;
 defender = noone;
 ai_attack = false;

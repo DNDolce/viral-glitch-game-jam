@@ -102,7 +102,7 @@ if text_pause_timer <= 0{
 	
 	if draw_character < text_length[page]{
 		if !audio_is_playing(text_sound_1)
-		{	audio_play_sound(text_sound_1, 10, false, 1);
+		{	audio_play_sound(text_sound_1, 10, false, 0.5);
 		};
 		draw_character += text_speed;
 		draw_character = clamp(draw_character, 0, text_length[page])

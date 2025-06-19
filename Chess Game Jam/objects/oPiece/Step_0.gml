@@ -78,9 +78,9 @@ if  piece == "pawn"
 		and _nearest.team != team
 		{	instance_create_layer(x+2 - tile_w, y+2 + tile_h, "Instances", oAttack);
 		};
-		_nearest = instance_nearest(x + tile_w, y - tile_h, oPiece);
+		_nearest = instance_nearest(x + tile_w, y + tile_h, oPiece);
 		if  _nearest.x == x + tile_w
-		and _nearest.y == y - tile_h
+		and _nearest.y == y + tile_h
 		and _nearest.team != team
 		{	instance_create_layer(x+2 + tile_w, y+2 + tile_h, "Instances", oAttack);
 		};
