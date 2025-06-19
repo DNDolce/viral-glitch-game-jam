@@ -72,7 +72,7 @@ function scr_game_text(_text_id){
 			scr_text("You did nothing in that fight!", "piece");
 			scr_text("NOTHING!", "piece");
 			scr_text("lol yeah i was just kinda sitting there");
-			scr_text("You are an absolute disgrace to this country and this monarchy. You should be ashamed of yourself!", "Piece");
+			scr_text("You are an absolute disgrace to this country and this monarchy. You should be ashamed of yourself!", "piece");
 			scr_text("can you yell at me more");
 			scr_text("No.", "piece");
 			scr_text("Anyways you should watch out for the next opponent. I've heard they do weird things with their pieces.", "piece");
@@ -101,7 +101,6 @@ function scr_game_text(_text_id){
 			break;
 			
 		case "pawn wait":
-			scr_text("...", "piece");
 			scr_text("It appears I did not consider the consequences of my actions.", "piece");
 			scr_text("Alright let's trade for realsies.", "piece");
 			oControl.alarm[1] = 5;
@@ -115,9 +114,11 @@ function scr_game_text(_text_id){
 			break;
 		case "pawn - did great":
 			scr_text("Wowee, thank you!", "piece");
+			audio_play_sound(snAccept, 0, false, 5);
 			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
 			break;
 		case "pawn - which one":
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("Wow. Just wow.", "piece");
 			break;
 		case "pawn rPostLevel2 1":
@@ -126,15 +127,19 @@ function scr_game_text(_text_id){
 		
 		case "rook rPostLevel2 0":
 			scr_text("I've heard rumours that in some countries castles don't move.", "piece");
+			scr_text("That's crazy right?", "piece");
 				scr_option("They don't", "rook - they don't");
 				scr_option("That's Illuminati talk", "rook - illuminati");
 			break;
 		case "rook - they don't":
 			scr_text("What does that make me then?", "piece");
+			audio_play_sound(snAccept, 0, false, 5);
 			break;
 		case "rook - illuminati":
 			scr_text("Exactly! It's as weird as pretending like triangles exist.", "piece");
+				scr_text_color(42, 50, c_yellow, c_yellow, c_yellow, c_yellow);
 			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			break;
 		case "rook rPostLevel2 1":
 			scr_text("I guess I'll just be sittin' here... not moving", "piece");
@@ -148,10 +153,12 @@ function scr_game_text(_text_id){
 			break;
 		case "bishop - yes":
 			scr_text("SO YOU'RE THE HEATHEN RESPONSIBLE!", "piece");
+			audio_play_sound(snAccept, 0, false, 5);
 			break;
 		case "bishop - no":
 			scr_text("Right? It couldn't be. So I wonder why...", "piece");
 			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			break;
 		case "bishop rPostLevel2 1":
 			scr_text("...", "piece");
@@ -164,10 +171,11 @@ function scr_game_text(_text_id){
 			break;
 		case "knight - ...":
 			scr_text("...", "horse");
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("(You get the impression you cannot date a horse)");
 			break;
 		case "knight rPostLevel2 1":
-			scr_text("(Rejection hurts");
+			scr_text("(Rejection hurts)");
 			break;
 			
 		case "queen rPostLevel2 0":
@@ -179,10 +187,12 @@ function scr_game_text(_text_id){
 			break;
 		case "queen - won't":
 			scr_text("Right. Dismiss problems the rest of us will have to clean up.", "piece");
+			audio_play_sound(snAccept, 0, false, 5);
 			break;
 		case "queen - eye out":
 			scr_text("Good, I appreciate you taking counsel.", "piece");
 			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			break;
 		case "queen rPostLevel2 1":
 			scr_text("Thank you for that.", "piece");
@@ -202,7 +212,9 @@ function scr_game_text(_text_id){
 			break;
 			
 		case "listen 0":
+			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
 			audio_play_sound(snBackgroundMusic, 0, true, 0.1);
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("The idea of the game was Chess with compounding mechanics with every level.", "blue npc");
 			scr_text("Usually with some kind of punchline.", "blue npc");
 			scr_text("Before the first level up you have basically normal chess with a little cutscene.", "blue npc");
@@ -213,6 +225,8 @@ function scr_game_text(_text_id){
 				scr_option("Exit", "exit - yes");
 			break;
 		case "listen 1":
+			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("Level 2 introduces the idea of new pieces and movement types.", "blue npc");
 			scr_text("Originally it was supposed to be whenever you took a piece your unit would GAIN the movement/attack of the taken piece", "blue npc");
 			scr_text("Which later kind of morphed into eventual class upgrades that included unique movement and mechanics.", "blue npc");
@@ -230,6 +244,8 @@ function scr_game_text(_text_id){
 				scr_option("Exit", "exit - yes");
 			break;
 		case "listen 2":
+			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("Level 3 was a ménage à trois... Apparently French characters don't work... Anyways halfway through the level a red team would show up with more board and attack everything in sight.", "blue npc");
 			scr_text("That was going to be an absolute nightmare to build.", "blue npc angry");
 			scr_text("Even just adding in the board and stuff, the entire game is built around the current sizes.", "blue npc");
@@ -240,6 +256,8 @@ function scr_game_text(_text_id){
 				scr_option("Exit", "exit - yes");
 			break;
 		case "listen 3":
+			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("Level 4 was the last one I really had any sort of plan for.", "blue npc");
 			scr_text("And it was based entirely around the punchline of 'Castles don't move, idiot.'", "blue npc happy");
 			scr_text("Enemy rooks were going to be immobile fortresses that they could hide pieces inside of.", "blue npc");
@@ -253,6 +271,8 @@ function scr_game_text(_text_id){
 				scr_option("Exit", "exit - yes");
 			break;
 		case "listen 4":
+			instance_create_layer(global.talker.x, global.talker.y, "Instances", oBond);
+			audio_play_sound(snAccept, 0, false, 5);
 			scr_text("Overall the project was a lot of fun though.", "blue npc happy");
 			scr_text("And I'm proud of how many bits of mechanics and QoL stuff I was able to add.", "blue npc happy");
 			scr_text("Now it's time for me to get back to my personal project.", "blue npc");

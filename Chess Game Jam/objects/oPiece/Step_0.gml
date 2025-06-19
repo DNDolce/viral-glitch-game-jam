@@ -156,7 +156,9 @@ if piece == "rook"
 or piece == "queen"
 or piece == "king"
 {	for (var u = 0; u < _row; u++)
-	{	if (u >= 1) {exit}
+	{	if piece == "king" && u > 0
+		{	break;
+		};
 		var _nearest = instance_nearest(x, y - (u+1) * tile_h, oPiece);
 		if _nearest.x == x 
 		and _nearest.y == y - (u+1) * tile_h
@@ -170,7 +172,10 @@ or piece == "king"
 	};
 	
 	for (var d = 0; d < 7 - _row; d++)
-	{	var _nearest = instance_nearest(x, y + (d+1) * tile_h, oPiece);
+	{	if piece == "king" && d > 0
+		{	break;
+		};
+		var _nearest = instance_nearest(x, y + (d+1) * tile_h, oPiece);
 		if _nearest.x == x 
 		and _nearest.y == y + (d+1) * tile_h
 		{	if _nearest.team != team
@@ -183,7 +188,10 @@ or piece == "king"
 	};
 	
 	for (var l = 0; l < _col; l++)
-	{	var _nearest = instance_nearest(x - (l+1) * tile_w, y, oPiece);
+	{	if piece == "king" && l > 0
+		{	break;
+		};
+		var _nearest = instance_nearest(x - (l+1) * tile_w, y, oPiece);
 		if _nearest.x == x - (l+1) * tile_w
 		and _nearest.y == y 
 		{	if _nearest.team != team
@@ -196,7 +204,10 @@ or piece == "king"
 	};
 	
 	for (var r = 0; r < 7 - _col; r++)
-	{	var _nearest = instance_nearest(x + (r+1) * tile_w, y, oPiece);
+	{	if piece == "king" && r > 0
+		{	break;
+		};
+		var _nearest = instance_nearest(x + (r+1) * tile_w, y, oPiece);
 		if _nearest.x == x + (r+1) * tile_w
 		and _nearest.y == y 
 		{	if _nearest.team != team
@@ -212,7 +223,9 @@ if piece == "bishop"
 or piece == "queen"
 or piece == "king"
 {	for (var ul = 0; ul < min(_row, _col); ul++)
-	{	if (ul >= 1) {exit}
+	{	if piece == "king" && ul > 0
+		{	break;
+		};
 		var _nearest = instance_nearest(x - (ul+1) * tile_w, y - (ul+1) * tile_h, oPiece);
 		if _nearest.x == x - (ul+1) * tile_w 
 		and _nearest.y == y - (ul+1) * tile_h
@@ -226,7 +239,10 @@ or piece == "king"
 	};
 	
 	for (var ur = 0; ur < min(_row, 7 - _col); ur++)
-	{	var _nearest = instance_nearest(x + (ur+1) * tile_w, y - (ur+1) * tile_h, oPiece);
+	{	if piece == "king" && ur > 0
+		{	break;
+		};
+		var _nearest = instance_nearest(x + (ur+1) * tile_w, y - (ur+1) * tile_h, oPiece);
 		if _nearest.x == x + (ur+1) * tile_w 
 		and _nearest.y == y - (ur+1) * tile_h
 		{	if _nearest.team != team
@@ -239,7 +255,10 @@ or piece == "king"
 	};
 	
 	for (var dl = 0; dl < min(7 - _row, _col); dl++)
-	{	var _nearest = instance_nearest(x - (dl+1) * tile_w, y + (dl+1) * tile_h, oPiece);
+	{	if piece == "king" && dl > 0
+		{	break;
+		};
+		var _nearest = instance_nearest(x - (dl+1) * tile_w, y + (dl+1) * tile_h, oPiece);
 		if _nearest.x == x - (dl+1) * tile_w 
 		and _nearest.y == y + (dl+1) * tile_h
 		{	if _nearest.team != team
@@ -252,7 +271,10 @@ or piece == "king"
 	};
 	
 	for (var dr = 0; dr < min(7 - _row, 7 - _col); dr++)
-	{	var _nearest = instance_nearest(x + (dr+1) * tile_w, y + (dr+1) * tile_h, oPiece);
+	{	if piece == "king" && dr > 0
+		{	break;
+		};
+		var _nearest = instance_nearest(x + (dr+1) * tile_w, y + (dr+1) * tile_h, oPiece);
 		if _nearest.x == x + (dr+1) * tile_w 
 		and _nearest.y == y + (dr+1) * tile_h
 		{	if _nearest.team != team
