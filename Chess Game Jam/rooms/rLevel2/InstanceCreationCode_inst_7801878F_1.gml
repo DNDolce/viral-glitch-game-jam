@@ -1,3 +1,3 @@
 piece = "knight";
-team = 1;
+team = 0;
 image_index = 11;

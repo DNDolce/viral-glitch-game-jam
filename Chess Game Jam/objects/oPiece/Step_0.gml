@@ -260,3 +260,24 @@ or piece == "queen"
 		};
 	};
 }
+
+if (piece == "knight") {
+	var k_moves = [[-2,-1], [-1,-2], [-2,1], [-1,2], [1,-2], [2,-1], [1,2], [2,1]]
+
+	for (var j = 0; j < array_length(k_moves); j++){
+		if (OnBoard(x + k_moves[j][0]*16, y + k_moves[j][1]*16)){
+			var _nearest = instance_nearest(x + k_moves[j][0]*16, y + k_moves[j][1]*16, oPiece);
+			
+			if (_nearest.x == x + k_moves[j][0]*16 && _nearest.y == y + k_moves[j][1]*16){
+				if _nearest.team != team {
+					instance_create_layer(x+2 + k_moves[j][0]*16, y+2 + k_moves[j][1]*16, "Instances", oAttack)
+				}
+
+			}
+			else {
+				instance_create_layer(x+2 + k_moves[j][0]*16, y+2 + k_moves[j][1]*16, "Instances", oIndicator)
+			}
+		}
+	}
+};
+
