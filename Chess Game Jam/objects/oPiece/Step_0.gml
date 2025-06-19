@@ -154,8 +154,10 @@ if  piece == "pawn inverse"
 };
 if piece == "rook"
 or piece == "queen"
+or piece == "king"
 {	for (var u = 0; u < _row; u++)
-	{	var _nearest = instance_nearest(x, y - (u+1) * tile_h, oPiece);
+	{	if (u >= 1) {exit}
+		var _nearest = instance_nearest(x, y - (u+1) * tile_h, oPiece);
 		if _nearest.x == x 
 		and _nearest.y == y - (u+1) * tile_h
 		{	if _nearest.team != team
@@ -208,8 +210,10 @@ or piece == "queen"
 };
 if piece == "bishop"
 or piece == "queen"
+or piece == "king"
 {	for (var ul = 0; ul < min(_row, _col); ul++)
-	{	var _nearest = instance_nearest(x - (ul+1) * tile_w, y - (ul+1) * tile_h, oPiece);
+	{	if (ul >= 1) {exit}
+		var _nearest = instance_nearest(x - (ul+1) * tile_w, y - (ul+1) * tile_h, oPiece);
 		if _nearest.x == x - (ul+1) * tile_w 
 		and _nearest.y == y - (ul+1) * tile_h
 		{	if _nearest.team != team
